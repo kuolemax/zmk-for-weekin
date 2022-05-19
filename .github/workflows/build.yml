@@ -68,6 +68,8 @@ jobs:
         run: west update
       - name: West Zephyr export
         run: west zephyr-export
+      - name: show dir info
+        run: ls && ls ..
       - name: West Build (${{ steps.variables.outputs.display-name }})
         run: |
           west build -s zmk/app -b ${{ matrix.board }} -- -DZMK_CONFIG=${GITHUB_WORKSPACE}/config ${{ steps.variables.outputs.extra-cmake-args }} ${{ matrix.cmake-args }}
