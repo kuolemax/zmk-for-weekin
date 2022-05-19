@@ -1,0 +1,59 @@
+/ {
+    weekin840_m2: connector {
+    compatible = "weekin840_m2";
+		#gpio-cells = <2>;
+		gpio-map-mask = <0xffffffff 0xffffffc0>;
+		gpio-map-pass-thru = <0 0x3f>;
+		gpio-map
+			= <1  0 &gpio1 11 0>
+			, <2  0 &gpio1 10 0> // BLUE LED
+			, <3  0 &gpio0 3  0>
+			, <4  0 &gpio0 28 0>
+            // 5 GND
+			, <6  0 &gpio1 13 0> // RGB
+			, <7  0 &gpio0 2  0>
+			, <8  0 &gpio0 29 0>
+			, <9  0 &gpio0 31 0>
+			, <10 0 &gpio0 30 0>
+			, <11 0 &gpio0 0  0> // XL1
+			, <12 0 &gpio0 26 0>
+			, <13 0 &gpio0 1  0> // XL2
+			, <14 0 &gpio0 6  0>
+			, <15 0 &gpio0 5  0>
+			, <16 0 &gpio0 8  0>
+			, <17 0 &gpio1 9  0>
+			, <18 0 &gpio0 4  0> // battery pin
+			// 19 VCC
+			, <20 0 &gpio0 12 0>
+			// 21 gnd
+			, <22 0 &gpio0 7  0>
+			// 23 VDDH
+			// 24 GND
+			// 25 DCCH
+			, <26 0 &gpio0 18 0> // RESET
+			// 27 VBUS
+			, <28 0 &gpio0 15 0>
+			// 29 D+
+			, <30 0 &gpio0 17 0>
+			// 31 D-
+			, <32 0 &gpio0 20 0>
+			, <33 0 &gpio0 13 0>
+			, <34 0 &gpio0 22 0>
+			, <35 0 &gpio0 24 0>
+			, <36 0 &gpio1 0  0>
+			// 37 DIO
+			, <38 0 &gpio1 2  0>
+			// 39 CLK
+			, <40 0 &gpio1 4  0>
+			, <41 0 &gpio0 9  0>
+			, <42 0 &gpio1 6  0>
+			, <43 0 &gpio0 10 0>
+			;
+    };
+};
+
+weekin840_m2_i2c: &i2c0 {};
+weekin840_m2_spi: &spi0 {};
+weekin840_m2_serial: &uart0 {};
+
+

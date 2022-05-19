@@ -1,0 +1,10 @@
+file_format: "1"
+id: weekin840_m2
+name: weekin840 M.2 Module
+type: board
+arch: arm
+outputs:
+  - usb
+  - ble
+url: 
+exposes: [weekin840_m2]

@@ -1,0 +1,12 @@
+file_format: "1"
+id: weekin_roc
+name: Weekin ROC
+type: shield
+url: 
+requires: [weekin840_m2]
+exposes: [i2c_oled]
+features:
+  - keys
+  - display
+  - underglow
+  - encoder
