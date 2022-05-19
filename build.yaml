@@ -13,4 +13,5 @@
 #
 ---
 include:
-  - board: weekin_roc
+  - board: weekin840_m2
+    shield: weekin_roc
